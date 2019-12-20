@@ -23,7 +23,7 @@ export default class Champ extends Component {
             <TouchableOpacity
               onPress={() => {
                 this.setState({
-                  displayModale: true,
+                  displayPassword: true,
                 });
               }}>
               <Text
@@ -33,9 +33,17 @@ export default class Champ extends Component {
             </TouchableOpacity>
           )}
         </View>
-        {textInputType && (
+        {textInputType === 'email' && (
           <TextInput
             style={[styles.textInput]}
+            //textContentType={'email'}
+            onChangeText={text => console.log(text)}></TextInput>
+        )}
+        {textInputType === 'password' && (
+          <TextInput
+            style={[styles.textInput]}
+            textContentType={'password'}
+            secureTextEntry={true}
             onChangeText={text => console.log(text)}></TextInput>
         )}
       </View>
