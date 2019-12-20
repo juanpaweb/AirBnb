@@ -3,8 +3,18 @@ import {Text, TextInput, View, TouchableOpacity} from 'react-native';
 import styles from '../components/styles.js';
 
 export default class Champ extends Component {
+  // constructor() {
+  //   super();
+  //   this.state = {
+  //     myText: 'Afficher',
+  //   };
+  // }
+  // updateText = () => {
+  //   this.setState({myText: 'Masquer'});
+  // };
   render() {
-    const {showPassword} = this.props;
+    const {showPassword, textInputType} = this.props;
+
     return (
       <View style={[styles.champ]}>
         <View style={[styles.flex]}>
@@ -16,26 +26,18 @@ export default class Champ extends Component {
                   displayModale: true,
                 });
               }}>
-              {showPassword && (
-                <Text onPress={this.updateText} style={styles.textShowPassword}>
-                  Afficher {/*{this.state.myText} */}
-                </Text>
-              )}
+              <Text
+                /*onPress={this.updateText}*/ style={styles.textShowPassword}>
+                Afficher {/*{this.state.myText} */}
+              </Text>
             </TouchableOpacity>
           )}
         </View>
-        <TouchableOpacity
-          onPress={() => {
-            this.setState({
-              displayPassword: true,
-            });
-          }}>
+        {textInputType && (
           <TextInput
             style={[styles.textInput]}
-            textContentType={'password'}
-            secureTextEntry={true}
             onChangeText={text => console.log(text)}></TextInput>
-        </TouchableOpacity>
+        )}
       </View>
     );
   }

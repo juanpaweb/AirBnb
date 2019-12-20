@@ -13,16 +13,6 @@ export default class LoginCo extends Component {
   state = {
     displayPassword: false,
   };
-
-  // constructor() {
-  //   super();
-  //   this.state = {
-  //     myText: 'Afficher',
-  //   };
-  // }
-  // updateText = () => {
-  //   this.setState({myText: 'Masquer'});
-  // };
   static navigationOptions = ({navigation}) => ({
     header: Header,
   });
@@ -34,10 +24,15 @@ export default class LoginCo extends Component {
           <Text style={stylesCo.connect}>Mot de passe oublié ?</Text>
         </View>
         <Text style={stylesCo.titre}>Connexion</Text>
-        <Champ title={'Adresse e-mail'} />
+        <Champ title={'Adresse e-mail'} textInputType={textContentType={'email'}} />
         <Champ
           title={'Mot de passe'}
           showPassword={true}
+          textInputType={
+            textContentType={'password'},
+          secureTextEntry={true}}
+          //   textContentType={'password'},
+          //   secureTextEntry={true}}
           display={this.state.displayPassword}
           close={() => this.setState({displayPassword: false})}
         />
