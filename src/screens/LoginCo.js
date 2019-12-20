@@ -24,13 +24,11 @@ export default class LoginCo extends Component {
           <Text style={stylesCo.connect}>Mot de passe oublié ?</Text>
         </View>
         <Text style={stylesCo.titre}>Connexion</Text>
-        <Champ title={'Adresse e-mail'} textInputType={textContentType={'email'}} />
+        <Champ title={'Adresse e-mail'} textInputType={'email'} />
         <Champ
           title={'Mot de passe'}
           showPassword={true}
-          textInputType={
-            textContentType={'password'},
-          secureTextEntry={true}}
+          textInputType={'password'}
           //   textContentType={'password'},
           //   secureTextEntry={true}}
           display={this.state.displayPassword}
