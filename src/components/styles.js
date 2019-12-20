@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
   textLabel: {
     color: Colors.white,
     textAlign: 'left',
-    fontWeight: 'bold',
+    fontWeight: '500',
     fontSize: 20,
     textTransform: 'uppercase',
   },

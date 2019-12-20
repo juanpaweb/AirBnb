@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Text, View, TouchableOpacity, TextInput} from 'react-native';
+import {Text, View, TouchableOpacity} from 'react-native';
 //import Icon from 'react-native-vector-icons/FontAwesome';
 //import styles from './styles';
 import stylesCo from './stylesCo';
@@ -11,8 +11,17 @@ import Header from '../components/Header';
 
 export default class LoginCo extends Component {
   state = {
-    displayModale: false,
+    displayPassword: false,
   };
+  // constructor() {
+  //   super();
+  //   this.state = {
+  //     myText: 'Afficher',
+  //   };
+  // }
+  // updateText = () => {
+  //   this.setState({myText: 'Masquer'});
+  // };
   static navigationOptions = ({navigation}) => ({
     header: Header,
   });
@@ -27,7 +36,20 @@ export default class LoginCo extends Component {
         <Champ title={'Adresse e-mail'} />
         <Champ
           title={'Mot de passe'}
-          showPassword={<Text style={stylesCo.textShowPassword}>Afficher</Text>}
+          showPassword={
+            <TouchableOpacity
+              onPress={() => {
+                this.setState({
+                  displayModale: true,
+                });
+              }}>
+              <Text onPress={this.updateText} style={stylesCo.textShowPassword}>
+                Afficher {/*{this.state.myText} */}
+              </Text>
+            </TouchableOpacity>
+          }
+          display={this.state.displayPassword}
+          close={() => this.setState({displayPassword: false})}
         />
         {/* 
         <FenetreModal

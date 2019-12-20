@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Text, TextInput, View} from 'react-native';
+import {Text, TextInput, View, TouchableOpacity} from 'react-native';
 import styles from '../components/styles.js';
 
 export default class Champ extends Component {
@@ -11,7 +11,18 @@ export default class Champ extends Component {
           <Text style={[styles.textLabel]}>{this.props.title}</Text>
           {showPassword}
         </View>
-        <TextInput style={[styles.textInput]}></TextInput>
+        <TouchableOpacity
+          onPress={() => {
+            this.setState({
+              displayPassword: true,
+            });
+          }}>
+          <TextInput
+            style={[styles.textInput]}
+            textContentType={'password'}
+            secureTextEntry={true}
+            onChangeText={text => console.log(text)}></TextInput>
+        </TouchableOpacity>
       </View>
     );
   }

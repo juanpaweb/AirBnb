@@ -43,6 +43,11 @@ const stylesCo = StyleSheet.create({
     fontSize: 18,
     marginBottom: 20,
   },
+  txtContentType: {
+    color: Colors.white,
+    fontSize: 18,
+    marginBottom: 20,
+  },
   //CSS de Fenêtre Modal
   plusOptionsBtn: {flex: 1, justifyContent: 'center'},
 });
