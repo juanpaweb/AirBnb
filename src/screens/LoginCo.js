@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import {Text, View, TouchableOpacity} from 'react-native';
+import {Text, View, TouchableOpacity, Button} from 'react-native';
 //import Icon from 'react-native-vector-icons/FontAwesome';
 //import styles from './styles';
 import stylesCo from './stylesCo';
 import componentsStyles from '../components/styles'; //Intégration du CSS du Bouton, Champ, Header, Fenêtre Modal
-//import Bouton from '../components/Bouton'; //Intégration du composants Bouton
+import Bouton from '../components/Bouton'; //Intégration du composants Bouton
 import Champ from '../components/Champ'; //Intégration du composants Champ
 import FenetreModal from '../components/FenetreModal'; //Intégration du composants Fenêtre Modal
 import Header from '../components/Header';
@@ -31,6 +31,12 @@ export default class LoginCo extends Component {
           textInputType={'password'}
           display={this.state.displayPassword}
           close={() => this.setState({displayPassword: false})}
+        />
+        <Bouton
+          title={'〉'}
+          backgroundColor={'white'}
+          textColor={'#008388'}
+          opacity={0.2}
         />
         {/* 
         <FenetreModal

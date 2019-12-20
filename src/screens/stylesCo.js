@@ -43,6 +43,20 @@ const stylesCo = StyleSheet.create({
     fontSize: 18,
     marginBottom: 20,
   },
+  //Bouton
+  scrollArrow: {
+    position: 'absolute',
+    width: 60,
+    height: 60,
+    fontSize: 40,
+    bottom: 10,
+    right: 20,
+    fontWeight: 'bold',
+  },
+  textScrollArrow: {
+    paddingHorizontal: 12,
+    fontSize: 25,
+  },
   //CSS de Fenêtre Modal
   plusOptionsBtn: {flex: 1, justifyContent: 'center'},
 });
