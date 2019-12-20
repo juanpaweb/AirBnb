@@ -6,17 +6,17 @@ export default class Champ extends Component {
   state = {
     displayPassword: false,
   };
-  // constructor() {
-  //   super();
-  //   this.state = {
-  //     myText: 'Afficher',
-  //   };
-  // }
-  // updateText = () => {
-  //   this.setState({myText: 'Masquer'});
-  // };
+  constructor() {
+    super();
+    this.state = {
+      myText: 'Afficher',
+    };
+  }
+  updateText = () => {
+    this.setState({myText: 'Masquer'});
+  };
   render() {
-    const {showPassword, textInputType, display} = this.props;
+    const {showPassword, textInputType} = this.props;
 
     return (
       <View style={[styles.champ]}>
@@ -29,9 +29,8 @@ export default class Champ extends Component {
                   displayPassword: true,
                 });
               }}>
-              <Text
-                /*onPress={this.updateText}*/ style={styles.textShowPassword}>
-                Afficher {/*{this.state.myText} */}
+              <Text onPress={this.updateText} style={styles.textShowPassword}>
+                {/*Afficher*/} {this.state.myText}
               </Text>
             </TouchableOpacity>
           )}
@@ -46,8 +45,8 @@ export default class Champ extends Component {
           <TextInput
             style={[styles.textInput]}
             textContentType={'password'}
-            visible={display}
             secureTextEntry={true}
+            //<SuperComposant text={isCorrectValue === true ? 'test1' : 'test2'} />
             onChangeText={text => console.log(text)}></TextInput>
         )}
       </View>

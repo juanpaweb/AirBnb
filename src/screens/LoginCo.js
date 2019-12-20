@@ -29,8 +29,6 @@ export default class LoginCo extends Component {
           title={'Mot de passe'}
           showPassword={true}
           textInputType={'password'}
-          //   textContentType={'password'},
-          //   secureTextEntry={true}}
           display={this.state.displayPassword}
           close={() => this.setState({displayPassword: false})}
         />
