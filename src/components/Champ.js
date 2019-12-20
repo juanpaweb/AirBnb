@@ -3,6 +3,9 @@ import {Text, TextInput, View, TouchableOpacity} from 'react-native';
 import styles from '../components/styles.js';
 
 export default class Champ extends Component {
+  state = {
+    displayPassword: false,
+  };
   // constructor() {
   //   super();
   //   this.state = {
@@ -13,7 +16,7 @@ export default class Champ extends Component {
   //   this.setState({myText: 'Masquer'});
   // };
   render() {
-    const {showPassword, textInputType} = this.props;
+    const {showPassword, textInputType, display} = this.props;
 
     return (
       <View style={[styles.champ]}>
@@ -43,6 +46,7 @@ export default class Champ extends Component {
           <TextInput
             style={[styles.textInput]}
             textContentType={'password'}
+            visible={display}
             secureTextEntry={true}
             onChangeText={text => console.log(text)}></TextInput>
         )}
