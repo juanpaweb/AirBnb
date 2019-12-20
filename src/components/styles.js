@@ -31,5 +31,29 @@ const styles = StyleSheet.create({
   },
   //CSS de Fenêtre Modal
   plusOptionsBtn: {flex: 1, justifyContent: 'center'},
+
+  //CSS de Champ
+  champ: {
+    marginTop: 15,
+    marginBottom: 15,
+  },
+  flex: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  textLabel: {
+    color: Colors.white,
+    textAlign: 'left',
+    fontWeight: 'bold',
+    fontSize: 20,
+    textTransform: 'uppercase',
+  },
+  textInput: {
+    color: Colors.white,
+    textAlign: 'left',
+    fontSize: 20,
+    borderBottomWidth: 1,
+    borderBottomColor: Colors.white,
+  },
 });
 export default styles;
