@@ -30,6 +30,6 @@ const styles = StyleSheet.create({
     paddingVertical: 0,
   },
   //CSS de Fenêtre Modal
-  plusOptionsBtn: {},
+  plusOptionsBtn: {flex: 1, justifyContent: 'center'},
 });
 export default styles;

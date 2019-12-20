@@ -13,7 +13,7 @@ export default class FenetreModal extends Component {
     const {display} = this.props;
     const {close} = this.props;
     return (
-      <View style={{marginTop: 22}}>
+      <View style={styles.plusOptionsBtn}>
         <Modal
           animationType="slide"
           transparent={false}

@@ -1,15 +1,19 @@
 import React, {Component} from 'react';
 import {Text, View, Image, TouchableOpacity} from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import styles from './styles';
 import componentsStyles from '../components/styles'; //Intégration du CSS du Bouton
 import Bouton from '../components/Bouton'; //Intégration du composants Bouton
 import FenetreModal from '../components/FenetreModal'; //Intégration du composants Fenêtre Modal
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Header from '../components/Header';
 
 export default class LoginScreen extends Component {
   state = {
     displayModale: false,
   };
+  static navigationOptions = ({navigation}) => ({
+    header: Header,
+  });
   render() {
     return (
       <View style={styles.structGlobal}>
@@ -43,6 +47,7 @@ export default class LoginScreen extends Component {
           title={'Créer un compte'}
           backgroundColor={'#008388'}
           textColor={'white'}
+          onPress={this.onCreateAccountPress}
         />
         <FenetreModal
           display={this.state.displayModale}
