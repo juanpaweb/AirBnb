@@ -9,7 +9,20 @@ export default class Champ extends Component {
       <View style={[styles.champ]}>
         <View style={[styles.flex]}>
           <Text style={[styles.textLabel]}>{this.props.title}</Text>
-          {showPassword}
+          {showPassword && (
+            <TouchableOpacity
+              onPress={() => {
+                this.setState({
+                  displayModale: true,
+                });
+              }}>
+              {showPassword && (
+                <Text onPress={this.updateText} style={styles.textShowPassword}>
+                  Afficher {/*{this.state.myText} */}
+                </Text>
+              )}
+            </TouchableOpacity>
+          )}
         </View>
         <TouchableOpacity
           onPress={() => {

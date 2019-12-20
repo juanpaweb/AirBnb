@@ -48,6 +48,12 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textTransform: 'uppercase',
   },
+
+  textShowPassword: {
+    color: Colors.white,
+    fontSize: 18,
+    marginBottom: 20,
+  },
   textInput: {
     color: Colors.white,
     textAlign: 'left',

@@ -33,11 +33,6 @@ const stylesCo = StyleSheet.create({
     margin: 'auto',
     transform: [{rotate: '180deg'}],
   },
-  textShowPassword: {
-    color: Colors.white,
-    fontSize: 18,
-    marginBottom: 20,
-  },
   textSavoirPlus: {
     color: Colors.white,
     fontSize: 18,

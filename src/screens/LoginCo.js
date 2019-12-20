@@ -13,6 +13,7 @@ export default class LoginCo extends Component {
   state = {
     displayPassword: false,
   };
+
   // constructor() {
   //   super();
   //   this.state = {
@@ -36,18 +37,7 @@ export default class LoginCo extends Component {
         <Champ title={'Adresse e-mail'} />
         <Champ
           title={'Mot de passe'}
-          showPassword={
-            <TouchableOpacity
-              onPress={() => {
-                this.setState({
-                  displayModale: true,
-                });
-              }}>
-              <Text onPress={this.updateText} style={stylesCo.textShowPassword}>
-                Afficher {/*{this.state.myText} */}
-              </Text>
-            </TouchableOpacity>
-          }
+          showPassword={true}
           display={this.state.displayPassword}
           close={() => this.setState({displayPassword: false})}
         />
